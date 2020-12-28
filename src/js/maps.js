@@ -1,5 +1,6 @@
 // Initialize and add the map
 function initMap() {
+
     const location = { lat: -7.8502794, lng: -35.7670493 };
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 16,
@@ -21,4 +22,14 @@ function initMap() {
         });
 
     });
+
+    // Desenho de cabo
+    const cabo = new google.maps.Polyline({
+        path: [],
+        strokeColor: "#0039d0",
+        strokeWeight: 3,
+        strokeOpacity: 1,
+        map: map
+    });
+
 }
